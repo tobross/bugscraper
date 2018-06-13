@@ -1,5 +1,5 @@
 //dependencies
-const express = require('express'),
+var express = require('express'),
       mongoose = require('mongoose'),
       exphbs = require('express-handlebars'),
       bodyParser = require('body-parser'),
@@ -9,10 +9,10 @@ const express = require('express'),
 
 
 //initializing the app
-const app = express();
+var app = express();
 
 //setting up the database
-const config = require('./config/database');
+var config = require('./config/database');
 mongoose.Promise = Promise;
 mongoose
   .connect(config.database)
@@ -42,7 +42,7 @@ app.use('/notes',express.static(path.join(__dirname, 'public')));
 
 
 //setting up routes
-const index = require('./routes/index'),
+var index = require('./routes/index'),
       articles = require('./routes/articles'),
       notes = require('./routes/notes'),
       scrape = require('./routes/scrape');
@@ -53,7 +53,7 @@ app.use('/notes', notes);
 app.use('/scrape', scrape);
 
 //starting server
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
   console.log(`Listening on http://localhost:${PORT}`);
 });
