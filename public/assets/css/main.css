@@ -59,12 +59,12 @@ button:focus {
 	margin: 0;
 	padding: 0 20px;
 	font-family: 'Quicksand', sans-serif;
-	text-shadow: 0 0 20px #ff005b;
+	text-shadow: 0 0 20px #00ffbb;
 }
 
 #neon:after {
-	content: '[ WEB-SCRAPER ]';
-	color: #ff005b;
+	content: '[ BUGSCRAPER ]';
+	color: #00ffbb;
 	position: absolute;
 	padding: 0 20px;
 	top: 0;
@@ -81,7 +81,7 @@ button:focus {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: #fe3a80;
+	background: #00ffbb;
 	z-index: -2;
 	-webkit-filter: blur(40px);
 	        filter: blur(40px);
@@ -129,14 +129,14 @@ button:focus {
 
 
 .modal-content {
-  background-image: url('../img/notepad-background.jpg');
+  background-image: url('../img/panel-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
   background-position: center 12%;
   border-radius: 0;
   font-family: 'Rock Salt', cursive;
-  color: #777;
+  color: rgb(109, 132, 168);
 
 }
 
@@ -182,7 +182,7 @@ button:focus {
 .deleteNote {
   font-size: 2.5em;
   background: transparent;
-  color: #777;
+  color: rgb(172, 148, 148);
   border: none;
 }
 
