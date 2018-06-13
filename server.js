@@ -1,11 +1,11 @@
 //dependencies
-var express = require('express'),
-      mongoose = require('mongoose'),
-      exphbs = require('express-handlebars'),
-      bodyParser = require('body-parser'),
-      logger = require('morgan'),
-      path = require('path'),
-      favicon = require('serve-favicon');
+var express = require('express');
+var mongoose = require('mongoose');
+var exphbs = require('express-handlebars');
+var bodyParser = require('body-parser');
+var logger = require('morgan');
+var path = require('path');
+var favicon = require('serve-favicon');
 
 
 //initializing the app
