@@ -6,6 +6,29 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var path = require('path');
 var favicon = require('serve-favicon');
+var MongoClient = require("mongodb").MongoClient;
+
+var MONGO_URL = "mongodb://Tobey:Charlie102@ds261460.mlab.com:61460/bugscraper";
+MongoClient.connect(MONGO_URL, (err, db) => {
+  if (err) {
+    return console.log(err);
+  }
+
+db.collection("goo").insertOne({
+  title: "hello",
+  text: "hope this works!"
+},
+function(err, res){
+  if (err) {
+    console.log("2"+err);
+    db.close();
+  }
+  else {
+    console.log("success!");
+    db.close();
+  }
+})
+});
 
 
 //initializing the app
